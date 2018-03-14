@@ -4,7 +4,7 @@
 <%   if v.is_a?(Hash) -%>
 [<%=  k %>]
 <%     v.map do |ki, vi| -%>
-<%       if ki == 'ldap_user_search_base' || ki == 'ldap_group_search_base' || ki == 'ldap_sudo_search_base' -%
+<%       if ki == 'ldap_user_search_base' || ki == 'ldap_group_search_base' || ki == 'ldap_sudo_search_base' -%>
 <%=        ki %> = <%= vi.join('?') %>
 <%       elsif vi.is_a?(Array) -%>
 <%=        ki %> = <%= vi.join(', ') %>
